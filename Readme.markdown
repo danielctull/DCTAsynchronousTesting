@@ -2,6 +2,37 @@
 
 DCTAsynchronousTesting provides compatibility code for the new Xcode 6 asynchronous testing methods in XCTest.
 
+## Usage
+
+* Clone this repository or add as a submodule and add the files from the `DCTAsynchronousTesting` directory into your test target.
+* Add `#import "XCTestCase+DCTAsynchronousTesting.h"` to the top of test classes you want to perform asynchronous testing.
+* Implement your test! An example is shown below.
+
+``` objective-c
+@import XCTest;
+#import <AsynchronousTesting/AsynchronousTesting.h>
+#import "XCTestCase+DCTAsynchronousTesting.h"
+
+@interface AsynchronousTestingTests : XCTestCase
+@end
+
+@implementation AsynchronousTestingTests
+
+- (void)testExample {
+
+	XCTestExpectation *expectation = [self expectationWithDescription:NSStringFromSelector(_cmd)];
+	[AsynchronousTesting performAsynchronousOperationWithCompletion:^(BOOL success) {
+		XCTAssertTrue(success, @"Operation should have succeeded.");
+		[expectation fulfill];
+	}];
+
+	[self waitForExpectationsWithTimeout:2 handler:nil];
+}
+
+@end
+
+```
+
 ## License
 
 Copyright (c) 2014 Daniel Tull. All rights reserved.
