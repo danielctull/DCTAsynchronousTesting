@@ -15,8 +15,8 @@
 		24522EB8196E7B1C00C708FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24522EB7196E7B1C00C708FF /* UIKit.framework */; };
 		24522EBB196E7B1C00C708FF /* libAsynchronousTesting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24522EA3196E7B1B00C708FF /* libAsynchronousTesting.a */; };
 		24522EC3196E7B1C00C708FF /* AsynchronousTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24522EC2196E7B1C00C708FF /* AsynchronousTestingTests.m */; };
-		24522ED0196E7BD800C708FF /* DCTTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24522ECD196E7BD800C708FF /* DCTTestExpectation.m */; };
-		24522ED1196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 24522ECF196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m */; };
+		24FDE015196EAB0D00B1F7E6 /* DCTTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FDE012196EAB0D00B1F7E6 /* DCTTestExpectation.m */; };
+		24FDE016196EAB0D00B1F7E6 /* XCTestCase+DCTAsynchronousTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FDE014196EAB0D00B1F7E6 /* XCTestCase+DCTAsynchronousTesting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +52,10 @@
 		24522EB7196E7B1C00C708FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		24522EBE196E7B1C00C708FF /* AsynchronousTestingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AsynchronousTestingTests-Info.plist"; sourceTree = "<group>"; };
 		24522EC2196E7B1C00C708FF /* AsynchronousTestingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsynchronousTestingTests.m; sourceTree = "<group>"; };
-		24522ECC196E7BD800C708FF /* DCTTestExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTTestExpectation.h; sourceTree = "<group>"; };
-		24522ECD196E7BD800C708FF /* DCTTestExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTTestExpectation.m; sourceTree = "<group>"; };
-		24522ECE196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+DCTAsynchronousTesting.h"; sourceTree = "<group>"; };
-		24522ECF196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+DCTAsynchronousTesting.m"; sourceTree = "<group>"; };
+		24FDE011196EAB0D00B1F7E6 /* DCTTestExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTTestExpectation.h; sourceTree = "<group>"; };
+		24FDE012196EAB0D00B1F7E6 /* DCTTestExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTTestExpectation.m; sourceTree = "<group>"; };
+		24FDE013196EAB0D00B1F7E6 /* XCTestCase+DCTAsynchronousTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+DCTAsynchronousTesting.h"; sourceTree = "<group>"; };
+		24FDE014196EAB0D00B1F7E6 /* XCTestCase+DCTAsynchronousTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+DCTAsynchronousTesting.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +86,7 @@
 			children = (
 				24522EA8196E7B1B00C708FF /* AsynchronousTesting */,
 				24522EBC196E7B1C00C708FF /* AsynchronousTestingTests */,
+				24FDE010196EAB0D00B1F7E6 /* DCTAsynchronousTesting */,
 				24522EA5196E7B1B00C708FF /* Frameworks */,
 				24522EA4196E7B1B00C708FF /* Products */,
 			);
@@ -123,13 +124,20 @@
 			isa = PBXGroup;
 			children = (
 				24522EC2196E7B1C00C708FF /* AsynchronousTestingTests.m */,
-				24522ECC196E7BD800C708FF /* DCTTestExpectation.h */,
-				24522ECD196E7BD800C708FF /* DCTTestExpectation.m */,
-				24522ECE196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.h */,
-				24522ECF196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m */,
 				24522EBE196E7B1C00C708FF /* AsynchronousTestingTests-Info.plist */,
 			);
 			path = AsynchronousTestingTests;
+			sourceTree = "<group>";
+		};
+		24FDE010196EAB0D00B1F7E6 /* DCTAsynchronousTesting */ = {
+			isa = PBXGroup;
+			children = (
+				24FDE011196EAB0D00B1F7E6 /* DCTTestExpectation.h */,
+				24FDE012196EAB0D00B1F7E6 /* DCTTestExpectation.m */,
+				24FDE013196EAB0D00B1F7E6 /* XCTestCase+DCTAsynchronousTesting.h */,
+				24FDE014196EAB0D00B1F7E6 /* XCTestCase+DCTAsynchronousTesting.m */,
+			);
+			path = DCTAsynchronousTesting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24522ED0196E7BD800C708FF /* DCTTestExpectation.m in Sources */,
+				24FDE015196EAB0D00B1F7E6 /* DCTTestExpectation.m in Sources */,
 				24522EC3196E7B1C00C708FF /* AsynchronousTestingTests.m in Sources */,
-				24522ED1196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m in Sources */,
+				24FDE016196EAB0D00B1F7E6 /* XCTestCase+DCTAsynchronousTesting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +410,7 @@
 				24522EC8196E7B1C00C708FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24522EC9196E7B1C00C708FF /* Build configuration list for PBXNativeTarget "AsynchronousTestingTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +419,7 @@
 				24522ECB196E7B1C00C708FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
