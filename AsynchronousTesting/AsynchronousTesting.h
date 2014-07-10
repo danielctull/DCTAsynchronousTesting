@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 Daniel Tull. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface AsynchronousTesting : NSObject
+
++ (void)performAsynchronousOperationWithCompletion:(void(^)(BOOL))completion;
 
 @end

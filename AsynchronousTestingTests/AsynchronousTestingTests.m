@@ -6,29 +6,24 @@
 //  Copyright (c) 2014 Daniel Tull. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
+#import <AsynchronousTesting/AsynchronousTesting.h>
+#import "XCTestCase+DCTAsynchronousTesting.h"
 
 @interface AsynchronousTestingTests : XCTestCase
-
 @end
 
 @implementation AsynchronousTestingTests
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+- (void)testExample {
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
+	XCTestExpectation *expectation = [self expectationWithDescription:NSStringFromSelector(_cmd)];
+	[AsynchronousTesting performAsynchronousOperationWithCompletion:^(BOOL success) {
+		XCTAssertTrue(success, @"Operation should have succeeded.");
+		[expectation fulfill];
+	}];
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	[self waitForExpectationsWithTimeout:2 handler:nil];
 }
 
 @end

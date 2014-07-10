@@ -10,4 +10,10 @@
 
 @implementation AsynchronousTesting
 
++ (void)performAsynchronousOperationWithCompletion:(void(^)(BOOL))completion {
+	dispatch_after(0.3, dispatch_get_main_queue(), ^{
+		completion(YES);
+	});
+}
+
 @end

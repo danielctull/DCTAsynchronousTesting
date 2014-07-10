@@ -14,8 +14,9 @@
 		24522EB6196E7B1C00C708FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24522EA6196E7B1B00C708FF /* Foundation.framework */; };
 		24522EB8196E7B1C00C708FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24522EB7196E7B1C00C708FF /* UIKit.framework */; };
 		24522EBB196E7B1C00C708FF /* libAsynchronousTesting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24522EA3196E7B1B00C708FF /* libAsynchronousTesting.a */; };
-		24522EC1196E7B1C00C708FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24522EBF196E7B1C00C708FF /* InfoPlist.strings */; };
 		24522EC3196E7B1C00C708FF /* AsynchronousTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24522EC2196E7B1C00C708FF /* AsynchronousTestingTests.m */; };
+		24522ED0196E7BD800C708FF /* DCTTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24522ECD196E7BD800C708FF /* DCTTestExpectation.m */; };
+		24522ED1196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 24522ECF196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +45,17 @@
 /* Begin PBXFileReference section */
 		24522EA3196E7B1B00C708FF /* libAsynchronousTesting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAsynchronousTesting.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24522EA6196E7B1B00C708FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		24522EAA196E7B1B00C708FF /* AsynchronousTesting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AsynchronousTesting-Prefix.pch"; sourceTree = "<group>"; };
 		24522EAB196E7B1C00C708FF /* AsynchronousTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsynchronousTesting.h; sourceTree = "<group>"; };
 		24522EAD196E7B1C00C708FF /* AsynchronousTesting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsynchronousTesting.m; sourceTree = "<group>"; };
 		24522EB3196E7B1C00C708FF /* AsynchronousTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsynchronousTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24522EB4196E7B1C00C708FF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		24522EB7196E7B1C00C708FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		24522EBE196E7B1C00C708FF /* AsynchronousTestingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AsynchronousTestingTests-Info.plist"; sourceTree = "<group>"; };
-		24522EC0196E7B1C00C708FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24522EC2196E7B1C00C708FF /* AsynchronousTestingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsynchronousTestingTests.m; sourceTree = "<group>"; };
+		24522ECC196E7BD800C708FF /* DCTTestExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTTestExpectation.h; sourceTree = "<group>"; };
+		24522ECD196E7BD800C708FF /* DCTTestExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTTestExpectation.m; sourceTree = "<group>"; };
+		24522ECE196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+DCTAsynchronousTesting.h"; sourceTree = "<group>"; };
+		24522ECF196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+DCTAsynchronousTesting.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,35 +115,21 @@
 			children = (
 				24522EAB196E7B1C00C708FF /* AsynchronousTesting.h */,
 				24522EAD196E7B1C00C708FF /* AsynchronousTesting.m */,
-				24522EA9196E7B1B00C708FF /* Supporting Files */,
 			);
 			path = AsynchronousTesting;
-			sourceTree = "<group>";
-		};
-		24522EA9196E7B1B00C708FF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				24522EAA196E7B1B00C708FF /* AsynchronousTesting-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		24522EBC196E7B1C00C708FF /* AsynchronousTestingTests */ = {
 			isa = PBXGroup;
 			children = (
 				24522EC2196E7B1C00C708FF /* AsynchronousTestingTests.m */,
-				24522EBD196E7B1C00C708FF /* Supporting Files */,
+				24522ECC196E7BD800C708FF /* DCTTestExpectation.h */,
+				24522ECD196E7BD800C708FF /* DCTTestExpectation.m */,
+				24522ECE196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.h */,
+				24522ECF196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m */,
+				24522EBE196E7B1C00C708FF /* AsynchronousTestingTests-Info.plist */,
 			);
 			path = AsynchronousTestingTests;
-			sourceTree = "<group>";
-		};
-		24522EBD196E7B1C00C708FF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				24522EBE196E7B1C00C708FF /* AsynchronousTestingTests-Info.plist */,
-				24522EBF196E7B1C00C708FF /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +202,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24522EC1196E7B1C00C708FF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24522ED0196E7BD800C708FF /* DCTTestExpectation.m in Sources */,
 				24522EC3196E7B1C00C708FF /* AsynchronousTestingTests.m in Sources */,
+				24522ED1196E7BD800C708FF /* XCTestCase+DCTAsynchronousTesting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,17 +235,6 @@
 			targetProxy = 24522EB9196E7B1C00C708FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		24522EBF196E7B1C00C708FF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24522EC0196E7B1C00C708FF /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		24522EC4196E7B1C00C708FF /* Debug */ = {
@@ -292,6 +271,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-objc-missing-property-synthesis",
+				);
 			};
 			name = Debug;
 		};
@@ -323,6 +306,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-objc-missing-property-synthesis",
+				);
 			};
 			name = Release;
 		};
@@ -331,7 +318,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/AsynchronousTesting.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AsynchronousTesting/AsynchronousTesting-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -343,7 +329,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/AsynchronousTesting.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AsynchronousTesting/AsynchronousTesting-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -359,13 +344,16 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AsynchronousTesting/AsynchronousTesting-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "AsynchronousTestingTests/AsynchronousTestingTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"$(inherited)",
+					"-Wno-gnu",
+				);
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -379,9 +367,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AsynchronousTesting/AsynchronousTesting-Prefix.pch";
 				INFOPLIST_FILE = "AsynchronousTestingTests/AsynchronousTestingTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"$(inherited)",
+					"-Wno-gnu",
+				);
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
