@@ -18,4 +18,6 @@
 
 @end
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 80000
 @compatibility_alias XCTestExpectation DCTTestExpectation;
+#endif
